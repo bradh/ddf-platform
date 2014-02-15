@@ -198,6 +198,7 @@
 		<module>metrics</module>
 		<module>platform-scheduler</module>
 		<module>security</module>
+		<module>proxy-http</module>
 		<module>platform-app</module>
 	</modules>
 	

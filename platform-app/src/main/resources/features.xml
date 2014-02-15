@@ -611,6 +611,9 @@
         description="cxf interceptors to capture metrics.">
         <bundle>mvn:ddf.metrics.interceptor/metrics-interceptor/${project.version}</bundle>
     </feature>   
+	<feature name="proxy-http" install="manual" version="${project.version}" description="HTTP Proxy">
+		<bundle>mvn:ddf.platform/proxy-http/${project.version}</bundle>
+	</feature>
 	
 	<feature name="platform-app" install="auto" version="${project.version}" description="DDF platform boot features">
         <feature>platform-status</feature>
@@ -626,6 +629,7 @@
         <feature>security-core-api</feature>
         <feature>metrics-reporting</feature>
         <feature>metrics-services</feature>
+		<feature>proxy-http</feature>
 		
 		<bundle>mvn:ch.qos.cal10n/cal10n-api/0.7.4</bundle> <!-- for slf4j-ext -->
 		<bundle>mvn:org.slf4j/slf4j-ext/${org.slf4j.version}</bundle>
@@ -638,6 +642,7 @@
 		<bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.saxon/${saxon.bundle.plugin}</bundle>
         <bundle>mvn:joda-time/joda-time/${joda-time.version}</bundle>
 	</feature>
+	
 	<feature name="platform-settings-config" version="${project.version}" description="Sets the DDF System Settings with default values">
 		<config name="ddf.platform.config">
 			version=${project.version}
@@ -647,5 +652,4 @@
 			organization=${organization.name}
 		</config>
 	</feature>
-	
 </features>
